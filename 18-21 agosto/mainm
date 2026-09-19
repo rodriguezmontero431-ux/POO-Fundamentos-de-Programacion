@@ -1,0 +1,11 @@
+
+package javaapplication13;
+
+public class JavaApplication13 {
+
+    public static void main(String[] args) {
+        Mascota mascota1 = new Mascota ("Tomy", "Perro", 10);
+        Mascota mascota2 = new Macota ("Lilo", "Gato", 5);
+        
+        mascota1.mostraInf();
+        mascota2.mascotraInf();
