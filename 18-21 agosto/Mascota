@@ -1,0 +1,16 @@
+
+package javaapplication13;
+
+public class Mascota {
+    String Nombre;
+    String Especie;
+    int Edad;
+    
+    public Mascota (String Nombre, String Especie, int Edad){
+        this.Nombre = Nombre;
+        this.Especie = Especie;
+        this.Edad = Edad;
+    }
+    public void mascotraInf(){
+        System.out.println("Nombre:" + Nombre + "Especie" + Especie + "Edad" + Edad);
+        
