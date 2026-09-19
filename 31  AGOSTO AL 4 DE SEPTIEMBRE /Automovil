@@ -1,0 +1,59 @@
+
+package javaapplication19;
+
+public class Automovil {
+
+    private String Fabricante;
+    private String Modelo;
+    private String Color;
+    private double Cilindrada;
+    private int CapacidadEstanque; 
+
+    
+    public Automovil(String fabricante, String modelo, String color,
+                      double cilindrada, int capacidadEstanque) {
+        this.Fabricante = fabricante;
+        this.Modelo = modelo;
+        this.Color = color;
+        this.Cilindrada = cilindrada;
+        this.CapacidadEstanque = capacidadEstanque;
+    }
+
+    
+
+    public String verDetalle() {
+        return "Fabricante: " + Fabricante +
+               ", Modelo: " + Modelo +
+               ", Color: " + Color +
+               ", Cilindrada: " + Cilindrada +
+               ", Capacidad Estanque: " + CapacidadEstanque + "L";
+    }
+
+    public String acelerar(int rpm) {
+        return Fabricante + " " + Modelo + " acelerando a " + rpm + " rpm.";
+    }
+
+    public String frenar() {
+        return Fabricante + " " + Modelo + " está frenando.";
+    }
+
+    public String acelerarFrenar(int rpm) {
+        String mensajeAcelerar = acelerar(rpm);
+        String mensajeFrenar = frenar();
+        return mensajeAcelerar + " | " + mensajeFrenar;
+    }
+
+    
+
+    // Versión 1: porcentaje como float (ej: 0.60f)
+    public float calcularConsumo(int km, float porcentajeGasolina) {
+        float litrosDisponibles = CapacidadEstanque * porcentajeGasolina;
+        return km / litrosDisponibles; 
+    }
+
+    
+    public float calcularConsumo(int km, int porcentajeGasolina) {
+        float porcentajeDecimal = porcentajeGasolina / 100f;
+        return calcularConsumo(km, porcentajeDecimal);
+    }
+}
