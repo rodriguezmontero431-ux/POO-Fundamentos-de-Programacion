@@ -1,0 +1,18 @@
+
+package javaapplication10;
+
+public class Libro {
+    String Titulo;
+    String Autor;
+    int NumeroPaginas;
+    
+    public Libro(String Titulo, String Autor, int NumeroPagina){
+        this.Titulo = Titulo;
+        this.Autor = Autor;
+        this.NumeroPaginas = NumeroPagina;
+        
+    }
+    public void mostraInf(){
+        System.out.println("Titulo:" + Titulo + "Autor:" + Autor + "NumeroPaginas:" + NumeroPaginas);
+    }
+}
