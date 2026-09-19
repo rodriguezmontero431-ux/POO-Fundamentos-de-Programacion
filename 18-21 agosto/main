@@ -1,0 +1,12 @@
+
+package javaapplication10;
+
+public class JavaApplication10 {
+
+    public static void main(String[] args) {
+        Libro libro1 = new Libro ("Memorias secretas del revolcon", "Mauricio Vargas", 304);
+        Libro libro2 = new Libro ("Lolita", "Vladimir Nabokov", 392);
+        
+        libro1.mostraInf();
+        libro2.mostraInf();
+        
