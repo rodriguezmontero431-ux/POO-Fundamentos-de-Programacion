@@ -1,0 +1,21 @@
+
+package javaapplication19;
+
+public class JavaApplication19 {
+
+    public static void main(String[] args) {
+        Automovil subaru = new Automovil(
+            "Subaru", "Impreza", "Blanco", 2.0, 40);
+
+        Automovil mazda = new Automovil(
+            "Mazda", "BT-50", "Rojo", 3.0, 60);
+
+        System.out.println(subaru.verDetalle());
+        System.out.println(subaru.acelerar(3000));
+        System.out.println(subaru.frenar());
+        System.out.println(mazda.acelerarFrenar(4000));
+
+        // Sobrecarga: una versión recibe float, otra int
+        System.out.println("Consumo subaru (float): " + subaru.calcularConsumo(500, 0.60f));
+        System.out.println("Consumo mazda (int): " + mazda.calcularConsumo(300, 60));
+        
