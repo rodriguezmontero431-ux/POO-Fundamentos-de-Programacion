@@ -1,0 +1,22 @@
+package javaapplication20;
+
+public class JavaApplication20 {
+
+    public static void main(String[] args) {
+    Libro libro1 = new  Libro("cin años de soledad", "Gabriel Garcia", "Surrealismo",600);
+        System.out.println(libro1.titulo);
+        System.out.println(libro1.verDetalle());
+        System.out.print(" VER DETALLE");
+        System.out.println(libro1.prestar("Maria"));
+        System.out.print(" VER DETALLE");
+        System.out.println(libro1.devolver());
+        System.out.print(" VER DETALLE");
+        System.out.println(libro1.prestarYDevolver("Maria"));
+        System.out.print(" VER DETALLE");
+        System.out.println(libro1.calcularTiempoLectura(40,1.5f));
+        System.out.print(" VER DETALLE");
+        System.out.println(libro1.calcularTiempoLectura(50,2));
+        System.out.print(" VER DETALLE");
+    }
+    
+}
