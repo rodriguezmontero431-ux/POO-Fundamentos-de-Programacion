@@ -1,0 +1,30 @@
+
+package retroalimentacion.parcial;
+
+public class RetroalimentacionParcial {
+
+    public static void main(String[] args) {
+        Empleados empleado1=new Empleados();
+        empleado1.setNombre("Maria");
+        empleado1.setCargo("ingeniera");
+        empleado1.setSalario(40000000);
+        empleado1.setAnosExperiencia(5);
+        
+        
+        System.out.println(empleado1.getNombre());
+        System.out.println(empleado1.getCargo());
+        System.out.println(empleado1.getSalario());
+        System.out.println(empleado1.getAnosExperiencia());
+        System.out.println(empleado1.verDetalle());
+        System.out.println(empleado1.trabajar(6));
+        System.out.println(empleado1.tomarDescanso());
+        
+        System.out.println(empleado1.calcularBono(10));
+        System.out.println(empleado1.calcularSalarioTotal(10, 25));
+        
+
+        
+    
+    }
+    
+}
