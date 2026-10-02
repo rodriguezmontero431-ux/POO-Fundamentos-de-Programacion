@@ -1,0 +1,32 @@
+
+package productos;
+
+public class Productos {
+
+    public static void main(String[] args) {
+        Main main1 = new Main ("Computador portatil", "Tecnologia", 2500000,8);
+        Main main2 = new Main ("Teclado", "Accesorios", 120000, 15);
+        Main main3 = new Main ("Mouse", "Accesorio", 85000, 20);
+        
+        System.out.println(main1.verDetalle());
+        System.out.println(main2.verDetalle());
+        System.out.println(main3.verDetalle());
+ 
+        
+        System.out.println("\nDescuento 10% (int): " + main1.calcularDescuento(10));
+        System.out.println("Descuento 12.5% (double): " + main1.calcularDescuento(12.5));
+        System.out.println("Precio final con 10%: " + main1.calcularPrecioFinal(10));
+        System.out.println("\nDescuento 10% (int): " + main2.calcularDescuento(10));
+        System.out.println("Descuento 12.5% (double): " + main2.calcularDescuento(12.5));
+        System.out.println("Precio final con 10%: " + main2.calcularPrecioFinal(10));
+        System.out.println("\nDescuento 10% (int): " + main3.calcularDescuento(10));
+        System.out.println("Descuento 12.5% (double): " + main3.calcularDescuento(12.5));
+        System.out.println("Precio final con 10%: " + main3.calcularPrecioFinal(10));
+ 
+        
+        System.out.println("\nCaso 1: " + main1.vender(3));
+ 
+        
+        Main productoPocoStock = new Main("Cable HDMI", "Accesorios", 30000.0, 2);
+        System.out.println("Caso 2: " + productoPocoStock.vender(5));
+        System.out.println("Stock sin cambios: " + productoPocoStock.getCantidadStock());
