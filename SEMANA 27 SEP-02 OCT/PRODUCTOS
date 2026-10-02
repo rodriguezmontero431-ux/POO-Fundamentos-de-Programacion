@@ -1,0 +1,76 @@
+
+package productos;
+
+public class Main {
+    private String nombre;
+    private String categorias;
+    private double precio;
+    private int cantidadStock;
+
+    public Main() {
+    }
+
+    public Main(String nombre, String categorias, double precio, int cantidadStock) {
+        this.nombre = nombre;
+        this.categorias = categorias;
+        this.precio = precio;
+        this.cantidadStock = cantidadStock;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getCategorias() {
+        return categorias;
+    }
+
+    public void setCategorias(String categorias) {
+        this.categorias = categorias;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public int getCantidadStock() {
+        return cantidadStock;
+    }
+
+    public void setCantidadStock(int cantidadStock) {
+        this.cantidadStock = cantidadStock;
+    }
+    public String verDetalle(){
+        return"\n El nombre del producto es:" + this.nombre +
+                "\n La categoria es:" + this.categorias + 
+                "\n El precio del producto es:" + this.precio +
+                "\n La catidad del Stok es:" + this.cantidadStock;
+    }
+    public double calcularDescuento(int porcentaje){
+        return precio * porcentaje/100;
+    }
+    public double calcularDescuento(double porcentaje){
+        return precio * porcentaje /100;
+    }
+    public double calcularPrecioFinal(double porcentaje){
+        return precio - calcularDescuento(porcentaje);
+    }
+    public String vender (double cantidad){
+        if (cantidad<=this.cantidadStock){
+            this.cantidadStock-=cantidad;
+            return "\n venta realizada y queda" + this.cantidadStock  + "Estas unidades"; 
+        }else{
+            return "\n No hay suficiente inventario para realizar la venta.";
+        }
+            
+    }
+    
+}
